@@ -39,10 +39,6 @@ public class Wander : MonoBehaviour
 		}
 	}
 
-	/// <summary>
-	/// Repeatedly calculates a new direction to move towards.
-	/// Use this instead of MonoBehaviour.InvokeRepeating so that the interval can be changed at runtime.
-	/// </summary>
 	IEnumerator NewHeading()
 	{
 		while (true)
@@ -52,9 +48,6 @@ public class Wander : MonoBehaviour
 		}
 	}
 
-	/// <summary>
-	/// Calculates a new direction to move towards.
-	/// </summary>
 	void NewHeadingRoutine()
 	{
 		var floor = Mathf.Clamp(heading - maxHeadingChange, 0, 360);
